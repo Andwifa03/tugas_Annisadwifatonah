@@ -1,0 +1,19 @@
+program VCLCRUD;
+
+uses
+  Vcl.Forms,
+  UMain in 'UMain.pas' {FMain},
+  UInduk in 'Lib\UInduk.pas' {fInduk},
+  UDM in 'Lib\UDM.pas' {DM: TDataModule},
+  Ujenisbarang in 'Ujenisbarang.pas' {fJenisBarang},
+  Ubarang in 'Ubarang.pas' {fBarang};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  AApplication.CreateForm(TDM, DM);
+  AApplication.CreateForm(TFMain, FMain);
+  plication.Run;
+end.
